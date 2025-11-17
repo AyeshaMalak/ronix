@@ -10,13 +10,12 @@ const Section = ({ id, title, text, img, reverse, children }) => (
     className={`relative flex flex-col ${
       reverse ? "md:flex-row-reverse" : "md:flex-row"
     } items-center justify-between max-w-[95rem] w-full mx-auto 
-    my-10 px-5 sm:px-8 md:px-12 py-12 bg-gray-100 gap-10 md:gap-14 shadow-md`}
+    my-10 px-5 sm:px-8 md:px-12 py-12 bg-gray-100 gap-10 md:gap-14`}
   >
     {children ? (
       children
     ) : (
       <>
-        {/* TEXT */}
         <div className="md:w-1/2 text-center md:text-left px-2">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">
             {title}
@@ -27,15 +26,14 @@ const Section = ({ id, title, text, img, reverse, children }) => (
           </p>
         </div>
 
-        {/* IMAGE */}
         {img && (
           <div className="md:w-1/2 flex justify-center items-center">
             <img
               src={img}
               alt={title}
-              className="rounded-lg w-full max-w-[420px] sm:max-w-[500px] md:max-w-[550px] 
+              className="rounded-lg w-full max-w-[420px] sm:max-w-[500px] md:max-w-[550px]
               lg:max-w-[600px] xl:max-w-[650px]
-              h-auto object-cover shadow-md"
+              h-auto object-cover"
             />
           </div>
         )}
@@ -51,7 +49,6 @@ const Home = () => {
     <Layout>
       <SideScroller />
 
-      {/* HERO SECTION */}
       <Section id="home">
         <div className="flex flex-col items-center justify-center w-full">
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12 mb-8 font-extrabold 
@@ -89,18 +86,17 @@ const Home = () => {
         </div>
       </Section>
 
-      {/* SECTIONS */}
       <Section
         id="section1"
         title="Our Design Expertise"
-        text="We create stunning visual designs that elevate your brand..."
+        text="We create stunning visual designs that elevate your brand and leave a lasting impression. Our team focuses on unique concepts, color schemes, and layouts that make your brand stand out. Every design is tailored to reflect your brand’s personality and vision."
         img="/image1.png"
       />
 
       <Section
         id="section2"
         title="Development"
-        text="We build robust, scalable applications with modern tech stacks..."
+        text="We build robust, scalable applications with modern technology stacks. Our developers ensure clean code, responsive design, and seamless user experiences. From web apps to mobile platforms, we create solutions that meet your business needs and future growth."
         img="/section2.png"
         reverse
       />
@@ -108,7 +104,7 @@ const Home = () => {
       <Section
         id="section3"
         title="Marketing Strategies"
-        text="Our marketing solutions help your business reach the right audience..."
+        text="Our marketing solutions help your business reach the right audience effectively. We create data-driven campaigns, optimize social media, and analyze trends to boost engagement. With strategic planning, we aim to increase brand awareness and generate measurable results for your business."
         img="/image3.png"
       />
 
